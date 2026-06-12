@@ -258,7 +258,7 @@ async function renderChoropleth() {
 // ============================================================================
 
 function formatScore(v) {
-  if (v === null || v === undefined || isNaN(v)) return "—";
+  if (v === null || v === undefined || isNaN(v)) return "0.000";
   return Number(v).toFixed(3);
 }
 
