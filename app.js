@@ -79,7 +79,7 @@ const ISO_COLOR_STOPS = [
 // Reproduit le comportement 'step' de Mapbox/MapLibre :
 // renvoie la couleur du dernier seuil <= t
 function isoColorForTime(t) {
-  if (t === null || t === undefined || isNaN(t)) return "#cccccc";
+  if (t === null || t === undefined || isNaN(t)) return "#ffffff";
   let color = ISO_COLOR_STOPS[0][1];
   for (const [threshold, c] of ISO_COLOR_STOPS) {
     if (t >= threshold) color = c;
@@ -181,7 +181,7 @@ function computeBreaks(geojson, column) {
 }
 
 function getColor(value, breaks) {
-  if (value === null || value === undefined || isNaN(value)) return "#cccccc";
+  if (value === null || value === undefined || isNaN(value)) return "#ffffff";
   for (let i = 0; i < COLOR_SCALE.length; i++) {
     if (value <= breaks[i + 1] || i === COLOR_SCALE.length - 1) {
       return COLOR_SCALE[i];
