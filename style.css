@@ -1,0 +1,146 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 320px;
+  right: 0;
+}
+
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  background: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.15);
+  padding: 16px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.control-group {
+  margin-bottom: 14px;
+}
+
+.control-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+#legend {
+  margin: 16px 0;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+#legend .legend-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border: 1px solid rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+#commune-info {
+  padding: 10px;
+  background: #f0f4f8;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#commune-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+}
+
+#commune-info table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+#commune-info td {
+  padding: 2px 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+#commune-info td.value {
+  text-align: right;
+  font-weight: 600;
+}
+
+.info-title {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 4px 0 6px 0;
+}
+
+#isochrone-toggles {
+  margin-top: 12px;
+  padding: 10px;
+  background: #fff8f0;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+#isochrone-toggles.hidden {
+  display: none;
+}
+
+.iso-checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.iso-checkbox-row input {
+  margin-right: 6px;
+}
+
+.iso-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.loading {
+  font-style: italic;
+  color: #888;
+}

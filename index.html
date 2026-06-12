@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibilité bancaire en Occitanie</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="controls">
+  <div class="control-group">
+    <label for="scoreType">Type de score</label>
+    <select id="scoreType">
+      <option value="couverture">Couverture d'accessibilité</option>
+      <option value="fca">E2SFCA</option>
+    </select>
+  </div>
+
+  <div class="control-group">
+    <label for="bankSelect">Banque</label>
+    <select id="bankSelect">
+      <option value="total">Accessibilité globale</option>
+      <option value="camions-jaunes">La Poste (camions jaunes)</option>
+      <option value="BNP_Paribas">BNP Paribas</option>
+      <option value="BPCE">BPCE</option>
+      <option value="Credit_Agricole">Crédit Agricole</option>
+      <option value="Credit_Mutuel">Crédit Mutuel</option>
+      <option value="La_Banque_Postale">La Banque Postale</option>
+      <option value="SG">Société Générale</option>
+      <option value="Others">Autres</option>
+    </select>
+  </div>
+
+  <div id="legend"></div>
+
+  <div class="control-group">
+    <label for="isoBankSelect">Afficher isochrones (temps de trajet)</label>
+    <select id="isoBankSelect">
+      <option value="">Choisir une banque</option>
+      <option value="camions-jaunes">La Poste (camions jaunes)</option>
+      <option value="BNP_Paribas">BNP Paribas</option>
+      <option value="BPCE">BPCE</option>
+      <option value="Credit_Agricole">Crédit Agricole</option>
+      <option value="Credit_Mutuel">Crédit Mutuel</option>
+      <option value="La_Banque_Postale">La Banque Postale</option>
+      <option value="SG">Société Générale</option>
+      <option value="Others">Autres</option>
+    </select>
+  </div>
+
+  <div id="iso-legend"></div>
+
+  <div class="control-group">
+    <label class="switch-label">
+      <input type="checkbox" id="hideCommunesToggle">
+      Masquer la couche communes
+    </label>
+    <label class="switch-label">
+      <input type="checkbox" id="hideIsochronesToggle">
+      Masquer la couche isochrones
+    </label>
+  </div>
+
+  <div id="commune-info">
+  </div>
+
+</div>
+
+<div id="map"></div>
+
+<div id="isochrone-toggles" class="hidden">
+  <p class="info-title">Isochrones</p>
+  <div id="isochrone-checkboxes"></div>
+</div>
+
+<script src="https://unpkg.com/simple-statistics@7.8.3/dist/simple-statistics.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
